@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from './Header';
+import { Game } from './Game';
+import { Rule } from './Rule';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Oneself } from './Oneself';
+import { Presentation } from './Presentation';
+import { useState } from 'react';
+
+export const App = () => {
+    // tabState
+    const [tab, setTab] = useState('Game');
+
+    return (
+        <div>
+            <Header tab={tab} setTab={setTab} />
+            <div>{
+                tab === 'Game' ?
+                    <Game />
+                    : tab === 'Rule' ?
+                        <Rule />
+                        : tab === 'Oneself' ?
+                            <Oneself /> : <Presentation />}
+            </div>
+        </div>
+    );
 }
-
-export default App;
