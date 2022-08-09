@@ -1,8 +1,6 @@
 import { Header } from './Header';
 import { Game } from './Game';
 import { Rule } from './Rule';
-
-import { Oneself } from './Oneself';
 import { Presentation } from './Presentation';
 import { useState } from 'react';
 
@@ -17,9 +15,7 @@ export const App = () => {
                 tab === 'Game' ?
                     <Game />
                     : tab === 'Rule' ?
-                        <Rule />
-                        : tab === 'Oneself' ?
-                            <Oneself /> : <Presentation />}
+                        <Rule /> : <Presentation />}
             </div>
         </div>
     );

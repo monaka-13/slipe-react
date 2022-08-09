@@ -18,8 +18,6 @@ export const Header = ({ tab, setTab }) => {
             <HeaderUl>
                 <HeaderLi focused={tab === 'Game'} onClick={() => setTab('Game')}>Game</HeaderLi>
                 <HeaderLi focused={tab === 'Rule'} onClick={() => setTab('Rule')}>Rule</HeaderLi>
-                <HeaderLi focused={tab === 'Config'} onClick={() => setTab('Config')}>Config</HeaderLi>
-                <HeaderLi focused={tab === 'Oneself'} onClick={() => setTab('Oneself')}>Talk to oneself</HeaderLi>
                 <HeaderLi focused={tab === 'Presentation'} onClick={() => setTab('Presentation')}>Presentation</HeaderLi>
             </HeaderUl>
         </Container>
