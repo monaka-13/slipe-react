@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container,HeaderUl} from './Styles/Styles';
+import { Container,HeaderUl } from './Styles/Styles';
 
 //ヘッダ用li(Header)
 const HeaderLi = styled.li`
@@ -19,6 +19,7 @@ export const Header = ({ tab, setTab }) => {
                 <HeaderLi focused={tab === 'Game'} onClick={() => setTab('Game')}>Game</HeaderLi>
                 <HeaderLi focused={tab === 'Rule'} onClick={() => setTab('Rule')}>Rule</HeaderLi>
                 <HeaderLi focused={tab === 'Presentation'} onClick={() => setTab('Presentation')}>Presentation</HeaderLi>
+                <HeaderLi focused={tab === 'Mutter'} onClick={() => setTab('Mutter')}>Mutter</HeaderLi>
             </HeaderUl>
         </Container>
 

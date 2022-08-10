@@ -1,22 +1,26 @@
+import { useState } from 'react';
 import { Header } from './Header';
 import { Game } from './Game';
 import { Rule } from './Rule';
 import { Presentation } from './Presentation';
-import { useState } from 'react';
+import { Mutter } from './Mutter';
 
 export const App = () => {
     // tabState
     const [tab, setTab] = useState('Game');
 
     return (
-        <div>
+        <>
             <Header tab={tab} setTab={setTab} />
-            <div>{
-                tab === 'Game' ?
+            <div>
+                {tab === 'Game' ?
                     <Game />
                     : tab === 'Rule' ?
-                        <Rule /> : <Presentation />}
+                        <Rule />
+                        : tab === 'Presentation' ?
+                            <Presentation /> : <Mutter />
+                }
             </div>
-        </div>
+        </>
     );
 }
