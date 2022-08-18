@@ -47,7 +47,7 @@ export const Square = (props) => {
 
       //動けないコマを選択していないか
       if (moveableSquare.length !== 0) {
-        //選択ピースの色塗る
+        //選択コマの色塗る
         markOnPiece(getPieceId(square));
 
         //移動可能マスも色塗る
@@ -77,12 +77,12 @@ export const Square = (props) => {
     let moveableSquare = []
     //-----down
     let cur = 999;//Integer
-    //隣のマスにピースがあるかどうか
+    //隣のマスにコマがあるかどうか
     for (let d = square.grid[0] + 1; d < 5; d++) {
       const pieceIdD = getSquare(d, square.grid[1]).pieceId;
-      // 突き当りがピース
+      // 突き当りがコマ
       if (pieceIdD !== -1) {
-        // 突き当りが普通のピース
+        // 突き当りが普通のコマ
         if (pieceIdD === 0 || pieceIdD === 5) {
           //突き当りがスター
           //スターの4方向マスの空白マスがない
@@ -102,12 +102,12 @@ export const Square = (props) => {
 
     //-----up
     cur = 999;
-    //隣のマスにピースがないかどうか
+    //隣のマスにコマがないかどうか
     for (let u = square.grid[0] - 1; u >= 0; u--) {
       const pieceIdU = getSquare(u, square.grid[1]).pieceId;
-      // 突き当りがピース
+      // 突き当りがコマ
       if (pieceIdU !== -1) {
-        // 突き当りが普通のピース
+        // 突き当りが普通のコマ
         if (pieceIdU === 0 || pieceIdU === 5) {
           //突き当りがスター
           //スターの4方向マスの空白マスがない
@@ -127,12 +127,12 @@ export const Square = (props) => {
 
     //-----right
     cur = 999;
-    //隣のマスにピースがないかどうか
+    //隣のマスにコマがないかどうか
     for (let r = square.grid[1] + 1; r < 5; r++) {
       const pieceIdR = getSquare(square.grid[0], r).pieceId;
-      // 突き当りがピース
+      // 突き当りがコマ
       if (pieceIdR !== -1) {
-        // 突き当りが普通のピース
+        // 突き当りが普通のコマ
         if (pieceIdR === 0 || pieceIdR === 5) {
           //突き当りがスター
           //スターの4方向マスの空白マスがない
@@ -152,12 +152,12 @@ export const Square = (props) => {
 
     //-----left
     cur = 999;
-    //隣のマスにピースがないかどうか
+    //隣のマスにコマがないかどうか
     for (let l = square.grid[1] - 1; l >= 0; l--) {
       const pieceIdL = getSquare(square.grid[0], l).pieceId;
-      // 突き当りがピース
+      // 突き当りがコマ
       if (pieceIdL !== -1) {
-        // 突き当りが普通のピース
+        // 突き当りが普通のコマ
         if (pieceIdL === 0 || pieceIdL === 5) {
           //突き当りがスター
           //スターの4方向マスの空白マスがない

@@ -3,7 +3,7 @@ import { ComponentPiece, MarkedPiece } from '../Styles/Styles';
 
 import { getColorByPieceId,　getStarByPieceId, isSelectedByPieceId, getSettingMark, getFlag } from '../Util/Pieces';
 
-//ピースの描画(Piece)
+//コマの描画(Piece)
 export const StyledPiece = styled(ComponentPiece)`
   background: ${props => getColorByPieceId(props.pieceId)};
   border-radius: ${props => getStarByPieceId(props.pieceId) ? "50%" : "10%"};

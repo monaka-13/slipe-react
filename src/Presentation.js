@@ -24,8 +24,10 @@ export const Presentation = () => {
                             <li>props</li>
                             <li>state</li>
                         </ul>
-                        <br />タブ、クリックによる影響＆盤面の反映
-                        <li>StyledComponent</li>
+                        <ul>
+                            <li>タブ、クリックによる影響＆盤面の反映</li>
+                        </ul>
+                        <li>StyledComponents</li>
                         <li>git</li>
                     </ul>
                 </Half>

@@ -9,7 +9,7 @@ import { getPlayers, setPlayer, getDefaultPlayers, getListPlayerColors } from '.
 import { resetSquares, getConfigSquareType, configSquares } from './Util/Squares';
 import { updatePieceColors, getSettingMark, getDefaultMark, updatePieceMark, getListMarks } from './Util/Pieces';
 
-//設定イメージ用のピース
+//設定イメージ用のコマ
 const ConfigImage = styled(ComponentPiece).attrs((props) => ({
     style: {
         background: `${props.color}`,
